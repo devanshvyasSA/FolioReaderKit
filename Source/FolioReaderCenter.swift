@@ -260,8 +260,8 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
     func configureNavBarButtons() {
 
         // Navbar buttons
-        //let shareIcon = UIImage(readerImageNamed: "icon-navbar-share")?.ignoreSystemTint(withConfiguration: self.readerConfig)
-        //let audioIcon = UIImage(readerImageNamed: "icon-navbar-tts")?.ignoreSystemTint(withConfiguration: self.readerConfig) //man-speech-icon
+        let shareIcon = UIImage(readerImageNamed: "icon-navbar-share")?.ignoreSystemTint(withConfiguration: self.readerConfig)
+        let audioIcon = UIImage(readerImageNamed: "icon-navbar-tts")?.ignoreSystemTint(withConfiguration: self.readerConfig) //man-speech-icon
         let closeIcon = UIImage(readerImageNamed: "icon-navbar-close")?.ignoreSystemTint(withConfiguration: self.readerConfig)
         //let tocIcon = UIImage(readerImageNamed: "icon-navbar-toc")?.ignoreSystemTint(withConfiguration: self.readerConfig)
         //let fontIcon = UIImage(readerImageNamed: "icon-navbar-font")?.ignoreSystemTint(withConfiguration: self.readerConfig)
@@ -271,7 +271,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         //let toc = UIBarButtonItem(image: tocIcon, style: .plain, target: self, action:#selector(presentChapterList(_:)))
 
         //navigationItem.leftBarButtonItems = [menu, toc]
-        menu.tintColor = UIColor.white
+        
         navigationItem.leftBarButtonItem = [menu]
         var rightBarIcons = [UIBarButtonItem]()
 
@@ -283,10 +283,10 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
             rightBarIcons.append(UIBarButtonItem(image: audioIcon, style: .plain, target: self, action:#selector(presentPlayerMenu(_:))))
         }
 
-        let font = UIBarButtonItem(image: fontIcon, style: .plain, target: self, action: #selector(presentFontsMenu))
-        font.width = space
+        //let font = UIBarButtonItem(image: fontIcon, style: .plain, target: self, action: #selector(presentFontsMenu))
+        //font.width = space
 
-        rightBarIcons.append(contentsOf: [font])
+        //rightBarIcons.append(contentsOf: [font])
         navigationItem.rightBarButtonItems = rightBarIcons
         
         if(self.readerConfig.displayTitle){

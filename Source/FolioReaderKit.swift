@@ -125,7 +125,8 @@ open class FolioReader: NSObject {
     }
 
     func isNight<T>(_ f: T, _ l: T) -> T {
-        return (self.nightMode == true ? f : l)
+//        return (self.nightMode == true ? f : l)
+        return f
     }
 
     /// UserDefault for the current ePub file.

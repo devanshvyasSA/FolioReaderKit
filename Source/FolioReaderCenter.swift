@@ -272,7 +272,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
 
         //navigationItem.leftBarButtonItems = [menu, toc]
         
-        navigationItem.leftBarButtonItem = [menu]
+        navigationItem.leftBarButtonItem = menu
         var rightBarIcons = [UIBarButtonItem]()
 
         if (self.readerConfig.allowSharing == true) {
